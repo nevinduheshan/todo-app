@@ -10,6 +10,7 @@
             <div class="overflow-hidden bg-white shadow-sm dark:bg-gray-800 sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <form class="w-full" method="post" action="{{ route('posts.store') }}">
+                        {{-- if we use POST method we need to put csrf token --}}
                         @csrf
                         <div class="flex flex-wrap mb-6 -mx-3">
                             <div class="w-full px-4 mb-4 md:mb-0">

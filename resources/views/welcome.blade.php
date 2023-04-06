@@ -1,8 +1,11 @@
 
+    {{-- go inside to the frontend page --}}
     @extends('layouts.frontend')
 
+   {{-- write content inside the frontend content --}}
     @section('content')
     <div class="mb-2 row">
+        {{-- for loop (get all posts in one by one ) --}}
         @foreach ($posts as $post)
         <div class="col-md-6">
             <div class="mb-4 card flex-md-row box-shadow h-md-250">

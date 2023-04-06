@@ -57,6 +57,7 @@
                 </div>
             </div>
 
+            {{-- change the contect  --}}
             <div>
                 @yield('content')
             </div>

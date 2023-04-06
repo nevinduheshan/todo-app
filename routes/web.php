@@ -20,6 +20,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', DashboardController::class)->name('dashboard');
     Route::resource('todo', TodoController::class);
     Route::get('/new', FuntionController::class) -> name('new');
+    //store is a method name inside Postcontroller
     Route::post('/posts/store', [Postcontroller::class, 'store']) -> name('posts.store');
     Route::get('/work', Workcontroller::class) -> name('work');
 

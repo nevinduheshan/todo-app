@@ -17,6 +17,8 @@ return new class extends Migration
             $table->text('description');
             $table->timestamps();
 
+
+            //Relasionship
             // $table->unsignedBigInteger('user_id');
             // $table->foreign('user_id') -> references('id') -> on('users')->cascadeOnDelete();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();

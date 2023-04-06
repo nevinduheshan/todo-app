@@ -4,51 +4,28 @@
             {{ __('New') }}
         </h2>
     </x-slot>
-
-    <div class="text-fuchsia-500">hfisfhiusbs</div>
-
-    {{-- <div id="myDIV">
-        @forelse ($todos as $todo)
-            <div
-            @class([
-                'py-4 flex items-center border-b border-gray-300  px-3 w-[60%] ',
-            $todo->iscompleted ? 'bg-gray' : ''
-            ])
-            >
-                <div class="flex-1 pr-8">
-                    <h3 class="text-lg font-semibold text-white" >{{ $todo->title }}</h3>
-                    <p class="text-black">{{ $todo->description }}</p>
-                </div>
-                <div class="flex space-x-3">
-                    <form action="{{ route('todo.update', $todo) }}" method="POST">
-                        @csrf
-                        @method('PATCH')
-                        <button type="submit" class="px-2 py-2 text-white bg-green-500 rounded-xl">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M4.5 12.75l6 6 9-13.5" />
-                            </svg>
-                        </button>
-                    </form>
-
-                    <form action="{{ route('todo.destroy', $todo) }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button class="px-2 py-2 text-white bg-red-500 rounded-xl">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                            </svg>
-                        </button>
-                    </form>
-                </div>
+    <div class="w-full max-w-sm lg:max-w-full lg:flex">
+        <div class="flex-none h-48 overflow-hidden text-center bg-cover rounded-t lg:h-auto lg:w-48 lg:rounded-t-none lg:rounded-l" style="background-image: url('/img/card-left.jpg')" title="Woman holding a mug">
+        </div>
+        <div class="flex flex-col justify-between p-4 leading-normal bg-white border-b border-l border-r border-gray-400 rounded-b lg:border-l-0 lg:border-t lg:border-gray-400 lg:rounded-b-none lg:rounded-r">
+          <div class="mb-8">
+            <p class="flex items-center text-sm text-gray-600">
+              <svg class="w-3 h-3 mr-2 text-gray-500 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
+              </svg>
+              Members only
+            </p>
+            <div class="mb-2 text-xl font-bold text-gray-900">Can coffee make you a better developer?</div>
+            <p class="text-base text-gray-700">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+          </div>
+          <div class="flex items-center">
+            {{-- <img class="w-10 h-10 mr-4 rounded-full" src="/img/jonathan.jpg" alt="Avatar of Jonathan Reinink"> --}}
+            <div class="text-sm">
+              <p class="leading-none text-gray-900">Jonathan Reinink</p>
+              <p class="text-gray-600">Aug 18</p>
             </div>
-        @empty
-            <div>
-                <p class="text-center text-white">No record yet</p>
-            </div>
-        @endforelse
-    </div> --}}
+          </div>
+        </div>
+      </div>
+
 </x-app-layout>
