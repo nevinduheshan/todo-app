@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
+
 class HomeController extends Controller
 {
     public function __invoke()
     {
-        return view('welcome');
+        $posts = Post::all();
+        return view('welcome' , compact('posts'));
     }
 }

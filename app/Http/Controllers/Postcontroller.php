@@ -15,4 +15,10 @@ class Postcontroller extends Controller
         ]);
         return back();
     }
+
+
+    public function show( $postId){
+        $post = Post::findOrFail($postId);
+        return view('posts.show', compact('post'));
+    }
 }

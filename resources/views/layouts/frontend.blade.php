@@ -57,7 +57,7 @@
                 </div>
             </div>
 
-            <div class="mb-2 row">
+            <div>
                 @yield('content')
             </div>
         </div>
