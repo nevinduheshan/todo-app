@@ -23,6 +23,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     //store is a method name inside Postcontroller
     Route::post('/posts/store', [Postcontroller::class, 'store']) -> name('posts.store');
     Route::get('/work', Workcontroller::class) -> name('work');
+    Route::get('/posts/all', [DashboardController::class, 'allPosts']) -> name('posts.all');
 
 });
 

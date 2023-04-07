@@ -20,6 +20,12 @@
                     <x-nav-link :href="route('todo.index')" :active="request()->routeIs('todo.index')">
                         {{ __('To do') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        {{ __('New Post') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('posts.all')" :active="request()->routeIs('posts.all')">
+                        {{ __('All Post') }}
+                    </x-nav-link>
                     <x-nav-link :href="route('new')" :active="request()->routeIs('new')">
                         {{ __('New') }}
                     </x-nav-link>
