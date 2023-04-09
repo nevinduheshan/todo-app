@@ -24,6 +24,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/posts/store', [Postcontroller::class, 'store']) -> name('posts.store');
     Route::get('/work', Workcontroller::class) -> name('work');
     Route::get('/posts/all', [DashboardController::class, 'allPosts']) -> name('posts.all');
+    Route::get('/posts/{postId}/edit', [Postcontroller::class, 'edit']) -> name('posts.edit');
+    Route::post('/posts/{postId}/update', [Postcontroller::class, 'update']) -> name('posts.update');
+    Route::get('/posts/{postId}/delete', [Postcontroller::class, 'delete']) -> name('posts.delete');
 
 });
 
