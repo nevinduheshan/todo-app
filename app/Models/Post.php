@@ -8,10 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
-    // all the datas in migration Post  
+    // all the datas in migration Post
     protected $fillable = [
         'user_id',
         'title',
         'description',
+        'thumbnail'
     ];
 }

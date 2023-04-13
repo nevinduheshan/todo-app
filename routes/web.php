@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\Dashboardcontroller as AdminDashboardcontroller;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FuntionController;
 use App\Http\Controllers\HomeController;
@@ -28,7 +29,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/posts/{postId}/update', [Postcontroller::class, 'update']) -> name('posts.update');
     Route::get('/posts/{postId}/delete', [Postcontroller::class, 'delete']) -> name('posts.delete');
 
+
 });
+
+ //Admin Routes
+ Route::get('/admin/dashboard', [AdminDashboardcontroller::class, 'index']) -> middleware('admin') -> name('admin.dashboard');
 
 Route::get('/posts/{postId}/show', [Postcontroller::class, 'show']) -> name('posts.show');
 
