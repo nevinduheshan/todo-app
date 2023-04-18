@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', HomeController::class)->name('welcome');
+Route::get('/posts/{postId}/show', [Postcontroller::class, 'show']) -> name('posts.show');
 
 
 Route::middleware(['auth', 'verified'])->group(function () {
@@ -33,9 +34,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
  //Admin Routes
+ Route::middleware('admin')->group(function () {
+
  Route::get('/admin/dashboard', [AdminDashboardcontroller::class, 'index']) -> middleware('admin') -> name('admin.dashboard');
 
-Route::get('/posts/{postId}/show', [Postcontroller::class, 'show']) -> name('posts.show');
+});
+
 
 
 require __DIR__ . '/auth.php';

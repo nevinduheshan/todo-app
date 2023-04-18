@@ -16,14 +16,18 @@ class IsAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        if(auth()->user()->role == ADMIN){
-        // if(Auth::user()->role == ADMIN){
-            return $next($request);
-            //redirect to admin page
-        }else{
-            //redirect to user page
+        if (auth()->user()) {
+            // if(auth()->user()->ADMIN()){
+            if (auth()->user()->role == ADMIN) {
+                // if(Auth::user()->role == ADMIN){
+                return $next($request);
+                //redirect to admin page
+            } else {
+                //redirect to user page
+                return back();
+            }
+        } else {
             return back();
         }
-
     }
 }

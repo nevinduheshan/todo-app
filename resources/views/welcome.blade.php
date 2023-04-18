@@ -14,7 +14,8 @@
                 <h3 class="mb-0">
                   <a class="text-dark" href="#">{{ $post -> title }}</a>
                 </h3>
-                <div class="mb-1 text-muted">{{ $post -> created_at }}</div>
+                {{-- come user model via post model (post model eka hadapu relationship eka nisa)|  can access allthe things under user table--}}
+                <div class="mb-1 text-muted">{{ $post->user->name }} {{ $post -> created_at }}</div>
                 <p class="mb-auto card-text">{{ $post -> description }}</a>
                     <a href="{{  route ('posts.show', $post->id) }}">Continue</a>
               </div>
