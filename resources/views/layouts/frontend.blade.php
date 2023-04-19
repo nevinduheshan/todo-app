@@ -41,6 +41,7 @@
                                 <line x1="21" y1="21" x2="15.8" y2="15.8"></line>
                             </svg>
                         </a>
+                        {{-- |||||||||||||||||||||||||||||||||||||||||||||| --}}
                         <a class="mx-4 btn btn-sm btn-outline-secondary" href="{{ route('login') }}">Login</a>
                         <a class="btn btn-sm btn-outline-secondary" href="{{ route('register') }}">Register</a>
                     </div>
@@ -64,8 +65,7 @@
         </div>
 
         <footer class="justify-center">
-            <p class="text-white ">Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a
-                    href="https://twitter.com/mdo">@mdo</a>.</p>
+
         </footer>
 
         <!-- Bootstrap core JavaScript
