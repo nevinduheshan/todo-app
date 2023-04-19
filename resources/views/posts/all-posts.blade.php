@@ -1,4 +1,9 @@
 <x-app-layout>
+    <x-slot name="header">
+        <h2 class="text-xl font-semibold leading-tight text-gray-800 dark:text-gray-200">
+            {{ __('All posts') }}
+        </h2>
+    </x-slot>
 
     {{-- @extends('layouts.navigation') --}}
 
@@ -25,6 +30,9 @@
                             Action
                         </th>
                         <th scope="col" class="px-6 py-3">
+                            Image
+                        </th>
+                        <th scope="col" class="px-6 py-3">
 
                         </th>
                         <th scope="col" class="px-6 py-3">
@@ -44,6 +52,9 @@
                             </td>
                             <td class="px-6 py-4">
                                 {{ $post->description }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $post->thumbnail }}
                             </td>
                             <td><a href="{{ route('posts.edit', $post->id) }}"
                                     class="text-white mt-2 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-8 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Edit</a>

@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\Dashboardcontroller as AdminDashboardcontroller;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FuntionController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\newpostcontroller;
 use App\Http\Controllers\Postcontroller;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TodoController;
@@ -20,6 +21,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/dashboard', DashboardController::class)->name('dashboard');
+    Route::get('/newPost', newpostcontroller::class)->name('newPost');
     Route::resource('todo', TodoController::class);
     Route::get('/new', FuntionController::class) -> name('new');
     //store is a method name inside Postcontroller

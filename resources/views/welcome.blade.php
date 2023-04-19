@@ -10,7 +10,7 @@
         <div class="col-md-6">
             <div class="mb-4 card flex-md-row box-shadow h-md-250">
               <div class="card-body d-flex flex-column align-items-start">
-                <img src="{{ asset('thumbnails/' .$post->thumbnail) }}" alt="thumbnail" class="h-auto max-w-xs rounded-lg">
+                <img src="{{ asset('thumbnails/' .$post->thumbnail) }}" alt="thumbnail" class="max-w-sm p-1 bg-white border rounded dark:border-neutral-700 dark:bg-neutral-800">
                 <h3 class="mb-0">
                   <a class="text-dark" href="#">{{ $post -> title }}</a>
                 </h3>
